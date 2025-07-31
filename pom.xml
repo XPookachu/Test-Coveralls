@@ -38,7 +38,21 @@
                         <artifactId>surefire-junit47</artifactId>
                         <version>3.0.0-M5</version>
                     </dependency>
+                    <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
+                    <dependency>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <version>0.8.13</version>
+                    </dependency>
                 </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>com.github.hazendaz.maven</groupId>
+                <artifactId>coveralls-maven-plugin</artifactId>
+                <version>4.7.0</version>
+                <configuration>
+                    <repoToken>yourcoverallsprojectrepositorytoken</repoToken>
+                </configuration>
             </plugin>
         </plugins>
     </build>
