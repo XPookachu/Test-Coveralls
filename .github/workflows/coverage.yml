@@ -7,16 +7,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      # ✅ Step 1: Cache Maven manually
+      - name: Cache Maven Dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: maven-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            maven-${{ runner.os }}-
+
+      # ✅ Step 2: Set up Java (no caching here)
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
           java-version: '11'
           distribution: 'adopt'
-          cache: 'maven'
-      - name: Build & Run Tests
+
+      # ✅ Step 3: Build and test
+      - name: Build and Run Tests
         run: mvn --batch-mode test jacoco:report
 
+      # ✅ Step 4: Submit coverage to Coveralls
       - name: Submit to Coveralls
-        run: mvn coveralls:report --define repoToken=${{ secrets.COVERALLS_REPO_TOKEN }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: mvn coveralls:report -DrepoToken=${{ secrets.COVERALLS_REPO_TOKEN }}
