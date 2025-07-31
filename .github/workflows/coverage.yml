@@ -1,15 +1,18 @@
-name: CI with Coverage
+name: CI with Coveralls
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
 
-      # ✅ Step 1: Cache Maven manually
-      - name: Cache Maven Dependencies
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Cache Maven packages
         uses: actions/cache@v3
         with:
           path: ~/.m2/repository
@@ -17,17 +20,14 @@ jobs:
           restore-keys: |
             maven-${{ runner.os }}-
 
-      # ✅ Step 2: Set up Java (no caching here)
-      - name: Set up JDK
+      - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
           java-version: '11'
           distribution: 'adopt'
 
-      # ✅ Step 3: Build and test
-      - name: Build and Run Tests
-        run: mvn --batch-mode test jacoco:report
+      - name: Build & Test with Coverage
+        run: mvn clean verify jacoco:report
 
-      # ✅ Step 4: Submit coverage to Coveralls
-      - name: Submit to Coveralls
+      - name: Upload Coverage to Coveralls
         run: mvn coveralls:report -DrepoToken=${{ secrets.COVERALLS_REPO_TOKEN }}
