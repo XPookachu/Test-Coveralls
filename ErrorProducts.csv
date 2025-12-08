@@ -1,0 +1,11 @@
+identity,name,image,brand,price,category,description,in_stock
+SKU001,Classic White T-Shirt,https://example.com/images/tshirt-white.jpg,Nike,29.99,Apparel,Comfortable cotton t-shirt for everyday wear,true
+SKU002,Running Shoes Pro,https://example.com/images/shoes-running.jpg,Adidas,129.99,Footwear,Professional running shoes with advanced cushioning,true
+SKU003,Wireless Bluetooth Headphones,https://example.com/images/headphones.jpg,Sony,199.99,Electronics,Premium noise-canceling wireless headphones,false
+SKU004,Leather Wallet,https://example.com/images/wallet.jpg,Gucci,249.99,Accessories,Genuine leather bifold wallet with RFID protection,true
+,Yoga Mat Premium,https://example.com/images/yoga-mat.jpg,Lululemon,68.00,Fitness,Non-slip eco-friendly yoga mat 6mm thick,true
+SKU006,Stainless Steel Water Bottle,https://example.com/images/bottle.jpg,Hydro Flask,34.95,Kitchen,Double-wall vacuum insulated 32oz bottle,true
+SKU006,Wireless Mouse,https://example.com/images/mouse.jpg,Logitech,49.99,Electronics,Ergonomic wireless mouse with silent clicks,true
+SKU008,Backpack Travel,https://example.com/images/backpack.jpg,North Face,159.00,Bags,40L travel backpack with laptop compartment,false
+SKU009,Sunglasses Aviator,https://example.com/images/sunglasses.jpg,Ray-Ban,179.99,Accessories,Classic aviator sunglasses with polarized lenses,true
+SKU010,Smartwatch Series X,https://example.com/images/smartwatch.jpg,Apple,399.00,Electronics,Advanced health tracking with GPS and cellular,true
