@@ -1,4 +1,4 @@
-identity,name,image,brand,price,category,description,in_stock
+identity,name,imageUrl,brand,price,category,description,in_stock
 SKU001,Classic White T-Shirt,https://example.com/images/tshirt-white.jpg,Nike,29.99,Apparel,Comfortable cotton t-shirt for everyday wear,true
 SKU002,Running Shoes Pro,https://example.com/images/shoes-running.jpg,Adidas,129.99,Footwear,Professional running shoes with advanced cushioning,true
 SKU003,Wireless Bluetooth Headphones,https://example.com/images/headphones.jpg,Sony,199.99,Electronics,Premium noise-canceling wireless headphones,false
