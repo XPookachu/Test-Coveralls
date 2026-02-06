@@ -5,6 +5,7 @@
     <description>Celebird data feed template.</description>
     <link>http://www.celebird.com</link>
     <item>
+      <g:id>celebird-eg-variants-apparel-upi-001</g:id>
       <title>Diesel Male's Black Stainless-Steel Analog Watch with Black Dial</title>
       <description>Cutting edge style watch with a black plastic round case, black dial, black silicone strap, 3-hand quartz analog movement. Scratch resistant mineral crystal face. Water resistant up to 50 meters. Case size: 36mm. Band width: 24mm.</description>
       <link>http://www.example.com/shop?products=variants-apparel-upi&amp;color=Black&amp;size=36mm&amp;country=US</link>
